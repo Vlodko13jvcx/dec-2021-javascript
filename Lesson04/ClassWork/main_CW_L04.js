@@ -78,10 +78,10 @@ console.log(`${average(someArray)} - середнє арифметичне ел�
 document.write(`${average(someArray)} - середнє арифметичне елементів масиву <br>`);
 
 // - створити функцію яка приймає будь-яку кількість чисел, повертає найменьше, а виводить найбільше (Math використовувати заборонено);
-function minVsMax(xxx) {
-    let min = arguments[0];
-    let max = arguments[0];
-    for (const element of arguments) {
+function minVsMax(...xxx) {
+    let min = xxx[0];
+    let max = xxx[0];
+    for (const element of xxx) {
         if (element > max) {
             max = element;
         } else if (element < min) {
